@@ -19,51 +19,6 @@ body.unscroll{
     opacity: 0;
   }
 
-/* SCROLL BAR STYLES*/
-::-webkit-scrollbar {
-    width: 10px;
-}
- /* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,  0.3);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    border-radius: 0px;
-    background: $main_color;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
-::-webkit-scrollbar-thumb:window-inactive {
-  background: $main_color;
-}
-
-/* BUTTON scrollUP SYLES*/
-
-#scrollup {
-    position: fixed;
-    right: 20px;
-    bottom: 30px;
-    width: 30px;
-    transform: rotate(180deg);
-    display: none;
-    opacity: 1;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 40px;
-    text-shadow: -2px 2px 5px rgba(0,0,0, 0.3);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    svg{
-      fill: #848484;
-      transition: all 0.5s;
-    }
-}
-
-#scrollup:hover{
-  svg{fill: $main_color;}
-}
-
 .hidden{
     height: 0;
     width: 0;

@@ -1,5 +1,23 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "Geometria-Bold";
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/Roboto.woff2") format("woff2"), url("fonts/Roboto.woff") format("woff"); }
+  src: url("fonts/Geometria-Bold.woff2") format("woff2"), url("fonts/Geometria-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/Geometria.woff2") format("woff2"), url("fonts/Geometria.woff") format("woff"); }
+
+@font-face {
+  font-family: "GothamPro-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/GothamPro-Bold.woff2") format("woff2"), url("fonts/GothamPro-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: "GothamPro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/GothamPro.woff2") format("woff2"), url("fonts/GothamPro.woff") format("woff"); }

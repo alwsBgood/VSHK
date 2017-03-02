@@ -1,3 +1,6 @@
 @import "bourbon";
 
-@include font-face("Roboto", "fonts/Roboto", $file-formats: woff woff2);
+@include font-face("Geometria-Bold", "fonts/Geometria-Bold", $file-formats: woff woff2);
+@include font-face("Geometria", "fonts/Geometria", $file-formats: woff woff2);
+@include font-face("GothamPro-Bold", "fonts/GothamPro-Bold", $file-formats: woff woff2);
+@include font-face("GothamPro", "fonts/GothamPro", $file-formats: woff woff2);

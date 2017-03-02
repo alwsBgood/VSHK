@@ -16,7 +16,7 @@ footer {
       color: #65666a;
       font-size: 14px; }
     footer .politics a:hover {
-      color: #1988cc; }
+      color: #005aff; }
     footer .politics a + a {
       margin-left: 10px; }
   footer .logo_rezart {
@@ -36,12 +36,6 @@ footer {
   cursor: -webkit-grabbing !important; }
 
 /* ==========================*/
-.tabs__content {
-  display: none !important; }
-
-.tabs__content.active {
-  display: block !important; }
-
 .hidden {
   height: 0;
   width: 0; }
@@ -217,7 +211,7 @@ div[id*="modal_politics"] {
   .btn_close_modal a:hover {
     color: #000; }
     .btn_close_modal a:hover svg .a {
-      fill: #1988cc; }
+      fill: #005aff; }
 
 .t_small {
   font-size: 14px; }
@@ -281,12 +275,12 @@ div[id*="modal_politics"] {
   margin: 0; }
 
 .slick-next:hover {
-  border-top: 4px solid #1988cc;
-  border-right: 4px solid #1988cc; }
+  border-top: 4px solid #005aff;
+  border-right: 4px solid #005aff; }
 
 .slick-prev:hover {
-  border-top: 4px solid #1988cc;
-  border-left: 4px solid #1988cc; }
+  border-top: 4px solid #005aff;
+  border-left: 4px solid #005aff; }
 
 .slick-next:before, .slick-prev:before {
   display: none; }
@@ -301,12 +295,12 @@ div[id*="modal_politics"] {
     padding: 25px 0;
     width: 100%;
     color: #000;
-    font: 18px/20px "Roboto", sans-serif; }
+    font: 18px/20px "Geometria", sans-serif; }
   .field textarea {
     padding: 25px 0;
     width: 100%;
     color: #000;
-    font: 18px/20px "Roboto", sans-serif; }
+    font: 18px/20px "Geometria", sans-serif; }
 
 .field:before {
   content: "";
@@ -325,7 +319,7 @@ div[id*="modal_politics"] {
   bottom: 0;
   width: 0;
   height: 3px;
-  background: #1988cc;
+  background: #005aff;
   -webkit-transition: all 0.4s;
   transition: all 0.4s; }
 
@@ -338,25 +332,25 @@ textarea:active + .bar, textarea:focus + .bar {
 
 input::-webkit-input-placeholder {
   color: #9F9F9F;
-  font: 18px/24px "Roboto", sans-serif; }
+  font: 18px/24px "Geometria", sans-serif; }
 
 input:-moz-placeholder {
   color: #9F9F9F;
-  font: 18px/24px "Roboto", sans-serif; }
+  font: 18px/24px "Geometria", sans-serif; }
 
 input::-moz-placeholder {
   color: #9F9F9F;
-  font: 18px/24px "Roboto", sans-serif; }
+  font: 18px/24px "Geometria", sans-serif; }
 
 input:-ms-input-placeholder {
   color: #9F9F9F;
-  font: 18px/24px "Roboto", sans-serif; }
+  font: 18px/24px "Geometria", sans-serif; }
 
 @media (min-width: 768px) and (max-width: 991px) {
   footer .politics a {
     font-size: 13px; } }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 800px) {
   .md_large .md_content {
     max-height: 320px; } }
 
