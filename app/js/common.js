@@ -155,6 +155,73 @@ $('.md-overlay').click(function() {
 });
 
 
+// SLIDER
+
+$(document).ready(function() {
+  $('.slider').slick({
+    slidesToShow: 1,
+    dots: false,
+    arrows: true,
+    fade: true,
+    slidesToScroll: 1,
+    autoplay: false,
+    adaptiveHeight: false
+  });
+});
+
+$(document).ready(function() {
+  $('.slider_testimonial').slick({
+    slidesToShow: 1,
+    dots: false,
+    arrows: true,
+    slidesToScroll: 1,
+    autoplay: false,
+    adaptiveHeight: true
+  });
+});
+
+// Menu
+
+$(document).ready(function() {
+    (function() {
+      var i, resize;
+
+      i = setInterval(function() {
+        return $("#nav .wrapper").toggleClass("cross");
+    }, 1500);
+
+      $("#nav .wrapper").click(function() {
+        clearInterval(i);
+        if($('#nav').hasClass('open')){
+            return $("#nav .wrapper").addClass("cross");
+        } else {
+            return $("#nav .wrapper").removeClass("cross");
+        }
+    });
+      $('.callback').click(function(){
+        clearInterval(i);
+        $("#nav .wrapper").addClass("cross");
+      });
+  }).call(this);
+
+    $('#menu').click(function(){
+        $('#nav').toggleClass('open');
+    });
+
+    $('#nav li a').click(function(){
+      $('#nav').removeClass('open');
+      $("#nav .wrapper").removeClass("cross");
+    })
+
+});
+
+
+// Coaches
+
+$('.more_coaches').click(function(event) {
+  $('.coaches_hidden').slideToggle();
+});
+
 // Perfect Pxel
 
 $('body').each(function() {

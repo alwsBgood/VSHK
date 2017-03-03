@@ -3,6 +3,195 @@
 
 //Custom Styles Here
 
+#sec_02{
+  padding: 150px 0 125px;
+  .first_title{
+    margin: 50px 0 15px;
+  }
+  .text_afterheader{
+    color: #555;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .separator{
+    margin-bottom: 15px;
+  }
+  .first_row{
+    margin-bottom: 90px;
+    .text{line-height: 24px;}
+  }
+  .item{
+    .title{
+      margin-top: 23px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+#sec_03{
+  padding: 150px 0 145px;
+  background-color: #f8f8f8;
+  .separator{margin-bottom: 65px;}
+  .item{
+    position: relative;
+    padding-left: 96px;
+    .img_wrap{
+      width: 68px;
+      height: 68px;
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #fff;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      svg{
+        fill: $main_color;
+        width: 34px;
+      }
+    }
+    .title{margin-bottom: 8px}
+  }
+  .item_row+.item_row{
+    margin-top: 50px;
+  }
+}
+
+#sec_04{
+  padding: 150px 0;
+  background-color: $second_color;
+  background-repeat: no-repeat;
+  background-position: top 120px center;
+  background-image: url(../img/sec_04-dots.png);
+  h2{
+    margin-top: 50px;
+  }
+  .separator{margin-bottom: 25px;}
+  .info_list{
+    li{
+      color: #555;
+      font-size: 18px;
+      line-height: 24px;
+      span{
+        display: inline-block;
+        margin-left: 15px;
+        font-size: 16px;
+      }
+    }
+    li+li{margin-top: 10px;}
+  }
+}
+
+#sec_05{
+  height: 1145px;
+
+  padding: 140px 0;
+  background-color: #f8f8f8;
+  .separator{margin-bottom: 15px;}
+  .text_afterheader{
+    color: #555;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 45px;
+  }
+  .coaches_hidden{
+    display: none;
+  }
+  .more_coaches{
+    color: $main_color;
+    cursor: pointer;
+    font-family: $title_font;
+    font-size: 14px;
+    line-height: 36px;
+    text-decoration: underline;
+    margin-top: 30px;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    &:hover{
+      color: #222;
+    }
+  }
+}
+
+.coach_item{
+  position: relative;
+  cursor: default;
+  background-color: #FFF;
+  padding-left: 165px;
+  padding-top: 60px;
+  padding-right: 60px;
+  min-height: 200px;
+  margin-top: 30px;
+  .coach_img{
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  .coach_name{
+    margin-bottom: 10px;
+  }
+
+  .coach_more{
+    opacity: 0;
+    transition: opacity .4s;
+    text-align: left;
+    position: absolute;
+    background-color: #fff;
+    margin-left: 165px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 390px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    padding: 20px 40px 20px 0;
+    .more_title{
+      margin-bottom: 5px;
+    }
+    .btn{
+      width: 260px;
+      margin-top: 20px;
+    }
+  }
+  &:hover{
+    transform: scale(1.05);
+    transition: transform .4s;
+    .coach_more{
+      opacity: 1;
+    }
+  }
+}
+
+#sec_06{
+  padding: 145px 0;
+  background-color: $second_color;
+  h2{
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .text{
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .btn{
+    margin-top: 23px;
+    @include size(259px 40px);
+  }
+}
+
+
+#sec_07{
+
+}
+
 form{
   width: 400px;
   margin: 40px auto;
@@ -38,5 +227,6 @@ footer{
 @import "_sketches.scss";
 @import "_media.scss";
 @import "../libs/niftymodal/component.css";
+@import "../libs/lightbox2/lightbox.min.css"
 @import "../libs/slick/slick.min.css";
 // @import "../fonts/font-awesome/font-awesome.min.css"

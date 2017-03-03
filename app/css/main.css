@@ -1,5 +1,188 @@
 @import url(../libs/niftymodal/component.css);
 @import url(../libs/slick/slick.min.css);
+#sec_02 {
+  padding: 150px 0 125px; }
+  #sec_02 .first_title {
+    margin: 50px 0 15px; }
+  #sec_02 .text_afterheader {
+    color: #555;
+    font-size: 18px;
+    line-height: 24px; }
+  #sec_02 .separator {
+    margin-bottom: 15px; }
+  #sec_02 .first_row {
+    margin-bottom: 90px; }
+    #sec_02 .first_row .text {
+      line-height: 24px; }
+  #sec_02 .item .title {
+    margin-top: 23px;
+    margin-bottom: 10px; }
+
+#sec_03 {
+  padding: 150px 0 145px;
+  background-color: #f8f8f8; }
+  #sec_03 .separator {
+    margin-bottom: 65px; }
+  #sec_03 .item {
+    position: relative;
+    padding-left: 96px; }
+    #sec_03 .item .img_wrap {
+      width: 68px;
+      height: 68px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #fff;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #sec_03 .item .img_wrap svg {
+        fill: #005aff;
+        width: 34px; }
+    #sec_03 .item .title {
+      margin-bottom: 8px; }
+  #sec_03 .item_row + .item_row {
+    margin-top: 50px; }
+
+#sec_04 {
+  padding: 150px 0;
+  background-color: #fadf77;
+  background-repeat: no-repeat;
+  background-position: top 120px center;
+  background-image: url(../img/sec_04-dots.png); }
+  #sec_04 h2 {
+    margin-top: 50px; }
+  #sec_04 .separator {
+    margin-bottom: 25px; }
+  #sec_04 .info_list li {
+    color: #555;
+    font-size: 18px;
+    line-height: 24px; }
+    #sec_04 .info_list li span {
+      display: inline-block;
+      margin-left: 15px;
+      font-size: 16px; }
+  #sec_04 .info_list li + li {
+    margin-top: 10px; }
+
+#sec_05 {
+  height: 1145px;
+  padding: 140px 0;
+  background-color: #f8f8f8; }
+  #sec_05 .separator {
+    margin-bottom: 15px; }
+  #sec_05 .text_afterheader {
+    color: #555;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 45px; }
+  #sec_05 .coaches_hidden {
+    display: none; }
+  #sec_05 .more_coaches {
+    color: #005aff;
+    cursor: pointer;
+    font-family: "GothamPro-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 36px;
+    text-decoration: underline;
+    margin-top: 30px;
+    display: inline-block;
+    position: relative;
+    z-index: 10; }
+    #sec_05 .more_coaches:hover {
+      color: #222; }
+
+.coach_item {
+  position: relative;
+  cursor: default;
+  background-color: #FFF;
+  padding-left: 165px;
+  padding-top: 60px;
+  padding-right: 60px;
+  min-height: 200px;
+  margin-top: 30px; }
+  .coach_item .coach_img {
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    width: 80px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  .coach_item .coach_name {
+    margin-bottom: 10px; }
+  .coach_item .coach_more {
+    opacity: 0;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
+    text-align: left;
+    position: absolute;
+    background-color: #fff;
+    margin-left: 165px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 390px;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: left;
+    -webkit-align-items: left;
+    -ms-flex-align: left;
+    align-items: left;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px 40px 20px 0; }
+    .coach_item .coach_more .more_title {
+      margin-bottom: 5px; }
+    .coach_item .coach_more .btn {
+      width: 260px;
+      margin-top: 20px; }
+  .coach_item:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s; }
+    .coach_item:hover .coach_more {
+      opacity: 1; }
+
+#sec_06 {
+  padding: 145px 0;
+  background-color: #fadf77; }
+  #sec_06 h2 {
+    margin-top: 20px;
+    display: inline-block; }
+  #sec_06 .text {
+    color: #000;
+    font-size: 18px;
+    line-height: 24px; }
+  #sec_06 .btn {
+    margin-top: 23px;
+    height: 40px;
+    width: 259px; }
+
 form {
   width: 400px;
   margin: 40px auto; }
