@@ -498,8 +498,49 @@ footer {
   height: 0;
   width: 0; }
 
+#modal_callback h2 {
+  margin: 30px 30px 30px; }
+
+div[id*="modal_coach-"] {
+  /* Track */
+  /* Handle */
+  min-width: 700px; }
+  div[id*="modal_coach-"] ::-webkit-scrollbar {
+    width: 10px; }
+  div[id*="modal_coach-"] ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3); }
+  div[id*="modal_coach-"] ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #005aff;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+  div[id*="modal_coach-"] ::-webkit-scrollbar-thumb:window-inactive {
+    background: #005aff; }
+  div[id*="modal_coach-"] .coach_img {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-bottom: 20px; }
+  div[id*="modal_coach-"] .coach_name {
+    font-size: 22px;
+    margin-bottom: 18px; }
+  div[id*="modal_coach-"] .text {
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 30px; }
+  div[id*="modal_coach-"] .biography {
+    color: #000; }
+  div[id*="modal_coach-"] .md-content {
+    max-height: 80vh;
+    padding: 40px 30px 20px;
+    background: #fff;
+    background-size: cover;
+    text-align: center;
+    overflow-y: scroll; }
+
 div[id*="modal_callback"] {
-  max-width: 500px; }
+  max-width: 500px;
+  max-height: 98vh;
+  overflow-y: scroll; }
   div[id*="modal_callback"] h2 {
     font-size: 29px;
     line-height: 36px;
@@ -514,13 +555,17 @@ div[id*="modal_callback"] {
   div[id*="modal_callback"] .form-wrap {
     display: block; }
   div[id*="modal_callback"] .field {
-    width: 360px; }
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto; }
     div[id*="modal_callback"] .field input {
       width: 100%; }
   div[id*="modal_callback"] .field + .field {
-    margin-top: 5px; }
+    margin-top: 15px; }
   div[id*="modal_callback"] .btn {
-    margin: 10px auto 0; }
+    margin: 25px auto 30px;
+    max-width: 300px;
+    width: 100%; }
 
 .field {
   position: relative;
@@ -639,9 +684,9 @@ div[id*="modal_politics"] {
 
 .btn_close_modal {
   position: absolute;
-  right: 30px;
+  right: 10px;
   z-index: 10;
-  top: 30px;
+  top: 10px;
   display: block;
   width: 40px;
   height: 40px;
@@ -799,6 +844,15 @@ textarea:active + .bar, textarea:focus + .bar {
 
 .field + .field {
   margin-top: 7px; }
+
+select {
+  padding: 15px 0;
+  width: 100%;
+  background-color: transparent;
+  color: #9F9F9F;
+  font: 16px/24px "Geometria", sans-serif;
+  border: none;
+  outline: none; }
 
 input::-webkit-input-placeholder {
   color: #9F9F9F;
@@ -1073,8 +1127,10 @@ textarea:-ms-input-placeholder {
       display: inline-block;
       float: none;
       margin-top: 20px; }
+  div[id*="modal_coach-"] {
+    min-width: 600px; }
   div[id*="modal_callback"] {
-    min-width: 320px; }
+    min-width: 500px; }
     div[id*="modal_callback"] .md-content {
       padding: 35px;
       background: #fff; }
@@ -1099,6 +1155,8 @@ textarea:-ms-input-placeholder {
     top: 20px; } }
 
 @media (max-width: 620px) {
+  div[id*="modal_callback"], div[id*="modal_coach-"] {
+    min-width: 400px; }
   #sec_07 [class*='slider_img-'] {
     display: block;
     margin: 0 auto !important;
@@ -1122,6 +1180,8 @@ textarea:-ms-input-placeholder {
     top: -40px; } }
 
 @media (max-width: 400px) {
+  div[id*="modal_callback"], div[id*="modal_coach-"] {
+    min-width: 100%; }
   #footer {
     text-align: center;
     padding: 60px 0; }

@@ -308,8 +308,11 @@
       margin-top: 20px;
     }
   }
+  div[id*="modal_coach-"]{
+    min-width: 600px;
+  }
   div[id*="modal_callback"]{
-    min-width: 320px;
+    min-width: 500px;
     .md-content{
       padding: 35px;
       background: #fff;
@@ -345,6 +348,9 @@
 
 
 @media (max-width: 620px) {
+  div[id*="modal_callback"], div[id*="modal_coach-"]{
+    min-width: 400px;
+  }
   #sec_07{
     [class*='slider_img-']{
       display: block;
@@ -379,6 +385,9 @@
 
 
 @media (max-width: 400px) {
+  div[id*="modal_callback"], div[id*="modal_coach-"]{
+    min-width: 100%;
+  }
   #footer{
     text-align: center;
     padding: 60px 0;
