@@ -174,7 +174,7 @@ div[id*="modal_politics"]{
     position : absolute;
     color : #4e4e4e;
     right:24px;
-    top:-10px;
+    top:-3px;
     opacity: 1;
 }
 
@@ -222,7 +222,6 @@ div[id*="modal_politics"]{
 
 .slick-dots {
   position: absolute;
-  bottom: -40px;
   display: block;
   width: 100%;
   text-align: center;
@@ -235,80 +234,107 @@ div[id*="modal_politics"]{
   padding: 0;
   cursor: pointer;
 }
-.slick-dots li.slick-active button { background: none; }
+.slick-dots li.slick-active button { background: $main_color; }
 
 .slick-dots li button {
-  background-color: #000;
+  height: 6px;
+  width: 6px;
+  background-color: #d5d5d5;
   border-radius: 50%;
-  border: 2px solid #000;
   color: transparent;
   cursor: pointer;
   display: block;
   font-size: 0;
-  height: 12px;
   line-height: 0;
   outline: medium none;
   padding: 2px;
-  width: 12px;
 }
 
-
-// .slick-next{
-//       z-index: 10;
-//       right: 0;
-//       background: url(../img/slider-next.png) top center no-repeat;
-//     }
-// .slick-prev{
-//       background: url(../img/slider-prev.png) top center no-repeat;
-//       z-index: 10;
-//       right: 180px;
-//   }
-
-// .slick-next, .slick-prev{
-//     position: absolute;
-//     display: block;
-//     cursor: pointer !important;
-//     width: 75px;
-//     height: 13px;
-//     border: none;
-//     outline: none;
-//     top: -40px;
-//   }
-
-.slick-next, .slick-prev{
-  bottom: initial;
-  top: 200px;
-  background: none;
-  width: 20px;
-  height: 20px;
-}
 .slick-next{
-  border-top: 4px solid #000;
-  border-right: 4px solid #000;
-  transform: rotate(45deg);
-  right: 10px;
-  margin: 0;
+  z-index: 10;
+  right: 0;
+  background: url(../img/slick-next.png) top center no-repeat;
+  &:hover:before{
+    opacity: 1;
+  }
+  &:before{
+    opacity: 0;
+    transition: .4s;
+    position: absolute;
+    z-index: 2;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: url(../img/slick-next-hover.png) center no-repeat;
+  }
 }
 .slick-prev{
-  border-top: 4px solid #000;
-  border-left: 4px solid #000;
-  transform: rotate(-45deg);
-  left: 10px;
-  margin: 0;
+  background: url(../img/slick-prev.png) top center no-repeat;
+  z-index: 10;
+  left: 0;
+  &:hover:before{
+    opacity: 1;
+  }
+  &:before{
+    opacity: 0;
+    transition: .4s;
+    position: absolute;
+    z-index: 2;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: url(../img/slick-prev-hover.png) center no-repeat;
+  }
 }
-.slick-next:hover{
-  border-top: 4px solid $main_color;
-  border-right: 4px solid $main_color;
-  // background: none !important;
+
+.slick-next, .slick-prev{
+  position: absolute;
+  display: block;
+  cursor: pointer !important;
+  width: 33px;
+  height: 16px;
+  border: none;
+  outline: none;
+  top: 5px;
 }
-.slick-prev:hover{
-  border-top: 4px solid $main_color;
-  border-left: 4px solid $main_color;
-  // background: none !important;
-}
-.slick-next:before, .slick-prev:before{
-  display: none;
-}
+
+
+
+// .slick-next, .slick-prev{
+//   bottom: initial;
+//   top: 200px;
+//   background: none;
+//   width: 20px;
+//   height: 20px;
+// }
+// .slick-next{
+//   border-top: 4px solid #000;
+//   border-right: 4px solid #000;
+//   transform: rotate(45deg);
+//   right: 10px;
+//   margin: 0;
+// }
+// .slick-prev{
+//   border-top: 4px solid #000;
+//   border-left: 4px solid #000;
+//   transform: rotate(-45deg);
+//   left: 10px;
+//   margin: 0;
+// }
+// .slick-next:hover{
+//   border-top: 4px solid $main_color;
+//   border-right: 4px solid $main_color;
+//   // background: none !important;
+// }
+// .slick-prev:hover{
+//   border-top: 4px solid $main_color;
+//   border-left: 4px solid $main_color;
+//   // background: none !important;
+// }
 
 .slick-slide{outline: none;}
 
@@ -317,8 +343,9 @@ div[id*="modal_politics"]{
   position: relative;
   display: block;
   input{
-    padding: 25px 0;
+    padding: 15px 0;
     width: 100%;
+    background-color: transparent;
     color: #000;
     font: 18px/20px $main_font;
   }
@@ -326,6 +353,7 @@ div[id*="modal_politics"]{
     padding: 25px 0;
     width: 100%;
     color: #000;
+    background-color: transparent;
     font: 18px/20px $main_font;
   }
 }
@@ -362,20 +390,40 @@ textarea:active+.bar, textarea:focus+.bar{
 
 input::-webkit-input-placeholder{
   color: #9F9F9F;
-  font: 18px/24px $main_font;
+  font: 16px/24px $main_font;
 }
 
 input:-moz-placeholder{
   color: #9F9F9F;
-  font: 18px/24px $main_font;
+  font: 16px/24px $main_font;
 }
 
 input::-moz-placeholder{
   color: #9F9F9F;
-  font: 18px/24px $main_font;
+  font: 16px/24px $main_font;
 }
 
 input:-ms-input-placeholder{
   color: #9F9F9F;
-  font: 18px/24px $main_font;
+  font: 16px/24px $main_font;
+}
+
+textarea::-webkit-input-placeholder{
+  color: #9F9F9F;
+  font: 16px/24px $main_font;
+}
+
+textarea:-moz-placeholder{
+  color: #9F9F9F;
+  font: 16px/24px $main_font;
+}
+
+textarea::-moz-placeholder{
+  color: #9F9F9F;
+  font: 16px/24px $main_font;
+}
+
+textarea:-ms-input-placeholder{
+  color: #9F9F9F;
+  font: 16px/24px $main_font;
 }
