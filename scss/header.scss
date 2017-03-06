@@ -199,13 +199,18 @@ h2{
     margin-left: auto;
     margin-right: auto;
   }
+  .mobile{
+    display: none;
+  }
 }
 
 // Menu
 
 #nav{
+  display: none;
   position: absolute;
-  top: 0;
+  background-color: $second_color;
+  top: -23px;
   right: 0;
   width: 60px;
   height: 60px;
@@ -213,8 +218,8 @@ h2{
   text-align: left;
   color: #222;
   overflow: hidden;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: width 1s, height .7s;
+  transition: width 1s, height .7s;
   #menu{z-index: 102}
   a:hover{
     color: $main_color;
@@ -278,22 +283,24 @@ h2{
 }
 
 #nav.open{
+  top: 0;
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: $second_color;
-    padding-right: 60px;
-    li{
-      width: 100%;
-      a{
-        opacity: 1;
-        display: inline-block;
-      }
-    }
-    .inner{
+  padding-right: 60px;
+  padding-top: 20px;
+  li{
+    width: 100%;
+    a{
       opacity: 1;
-      display: block;
+      display: inline-block;
     }
+  }
+  .inner{
+    opacity: 1;
+    display: block;
+  }
 }
 
 #nav .svg {
@@ -327,4 +334,69 @@ path#middle {
 .cross path#middle {
   stroke-dashoffset: -115px;
   stroke-dasharray: 1px 220px;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+  #nav{
+    display: block;
+  }
+  #sec_01{
+    background-image: none;
+    .navigation, .desctop{
+      display: none;
+    }
+    .mobile{
+      display: flex;
+      float: left;
+    }
+    .logo{
+      float: left;
+      margin-right: 40px;
+    }
+    .header .col-2 {width: 100%}
+  }
+}
+
+@media (max-width: 767px) {
+  #nav{
+    display: block;
+    overflow-y: scroll;
+  }
+  #sec_01{
+    background-image: none;
+    padding-bottom: 100px;
+    padding-top: 30px !important;
+    .navigation, .desctop{
+      display: none;
+    }
+    .header_text{
+      font-size: 50px;
+      line-height: 58px;
+    }
+    .mobile{
+      display: flex;
+      float: left;
+    }
+    .logo{
+      float: left;
+      margin-right: 40px;
+    }
+    .header{
+      margin-bottom: 60px;
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  #sec_01{
+    .call_btn{
+      display: none;
+    }
+    .header_text{
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
 }

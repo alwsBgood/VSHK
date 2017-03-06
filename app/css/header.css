@@ -168,10 +168,14 @@ h2 {
     width: 160px;
     margin-left: auto;
     margin-right: auto; }
+  #sec_01 .mobile {
+    display: none; }
 
 #nav {
+  display: none;
   position: absolute;
-  top: 0;
+  background-color: #fadf77;
+  top: -23px;
   right: 0;
   width: 60px;
   height: 60px;
@@ -179,8 +183,8 @@ h2 {
   text-align: left;
   color: #222;
   overflow: hidden;
-  -webkit-transition: all 1s;
-  transition: all 1s; }
+  -webkit-transition: width 1s, height .7s;
+  transition: width 1s, height .7s; }
   #nav #menu {
     z-index: 102; }
   #nav a:hover {
@@ -236,11 +240,13 @@ h2 {
   color: #222; }
 
 #nav.open {
+  top: 0;
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: #fadf77;
-  padding-right: 60px; }
+  padding-right: 60px;
+  padding-top: 20px; }
   #nav.open li {
     width: 100%; }
     #nav.open li a {
@@ -281,3 +287,54 @@ path#middle {
 .cross path#middle {
   stroke-dashoffset: -115px;
   stroke-dasharray: 1px 220px; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #nav {
+    display: block; }
+  #sec_01 {
+    background-image: none; }
+    #sec_01 .navigation, #sec_01 .desctop {
+      display: none; }
+    #sec_01 .mobile {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: left; }
+    #sec_01 .logo {
+      float: left;
+      margin-right: 40px; }
+    #sec_01 .header .col-2 {
+      width: 100%; } }
+
+@media (max-width: 767px) {
+  #nav {
+    display: block;
+    overflow-y: scroll; }
+  #sec_01 {
+    background-image: none;
+    padding-bottom: 100px;
+    padding-top: 30px !important; }
+    #sec_01 .navigation, #sec_01 .desctop {
+      display: none; }
+    #sec_01 .header_text {
+      font-size: 50px;
+      line-height: 58px; }
+    #sec_01 .mobile {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: left; }
+    #sec_01 .logo {
+      float: left;
+      margin-right: 40px; }
+    #sec_01 .header {
+      margin-bottom: 60px; } }
+
+@media (max-width: 400px) {
+  #sec_01 .call_btn {
+    display: none; }
+  #sec_01 .header_text {
+    font-size: 40px;
+    line-height: 48px; } }
