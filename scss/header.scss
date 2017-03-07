@@ -66,6 +66,11 @@ h2{
     width: 0;
 }
 
+button.btn span{
+  display: inline-block;
+  margin-top: 2px;
+}
+
 .btn{
   position: relative;
   box-shadow: 0 9px 27px rgba(0, 0, 0, 0.32);
@@ -198,6 +203,10 @@ h2{
     @include size(160px 40px);
     margin-left: auto;
     margin-right: auto;
+    &:hover{
+      border: 1px solid #222;
+      background-color: transparent;
+    }
   }
   .mobile{
     display: none;
@@ -215,9 +224,9 @@ h2{
   width: 60px;
   height: 60px;
   z-index: 100;
-  text-align: left;
+  text-align: center;
   color: #222;
-  overflow: hidden;
+  overflow: hidden !important;
   -webkit-transition: width 1s, height .7s;
   transition: width 1s, height .7s;
   #menu{z-index: 102}
@@ -241,14 +250,21 @@ h2{
   }
   li+li{margin-top: 20px;}
   .inner{
-    width: 350px;
-    margin-left: 40px;
+    margin: 0 auto;
     opacity: 0;
     display: 0;
+    overflow-y: hidden;
+  }
+  .contacts{
+    margin-top: 200px;
+    .link_block{
+      margin: 0 20px;
+    }
   }
 }
 
 .contacts{
+  // margin-top: 200px;
   .contacts_title{
     font-size: 18px;
     margin-bottom: 20px;
@@ -260,11 +276,13 @@ h2{
     fill: $main_color;
   }
   .link_block{
+    vertical-align: top;
     position: relative;
-    display: block;
+    display: inline-block;
+    // min-width: 180px;
     padding-left: 30px;
+    text-align: left;
     cursor: pointer;
-    margin-bottom: 10px;
     .icon{
       position: absolute;
       left: 0;
@@ -285,10 +303,10 @@ h2{
 #nav.open{
   top: 0;
   position: fixed;
+  overflow-y: scroll !important;
   width: 100%;
   height: 100vh;
   background-color: $second_color;
-  padding-right: 60px;
   padding-top: 20px;
   li{
     width: 100%;
@@ -300,6 +318,7 @@ h2{
   .inner{
     opacity: 1;
     display: block;
+    margin-left: 10px;
   }
 }
 
@@ -362,6 +381,15 @@ path#middle {
   #nav{
     display: block;
     overflow-y: scroll;
+    .contacts{
+      margin-top: 40px;
+      .link_block{
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        max-width: 180px;
+      }
+    }
   }
   #sec_01{
     background-image: none;

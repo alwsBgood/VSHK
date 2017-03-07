@@ -437,7 +437,7 @@
     margin-top: 22px; }
   #footer .social {
     display: block;
-    margin-top: 45px; }
+    margin-top: 33px; }
     #footer .social svg {
       fill: #fff;
       width: 20px; }
@@ -918,7 +918,8 @@ textarea:-ms-input-placeholder {
           width: 28px; }
   #sec_04 {
     padding: 100px 0;
-    background-image: none; }
+    background-image: none;
+    text-align: center; }
     #sec_04 h2 {
       margin-top: 0; }
     #sec_04 .sec_img {
@@ -954,12 +955,16 @@ textarea:-ms-input-placeholder {
     padding: 100px 0; }
   .course {
     padding: 25px 10px 1px; }
+    .course .course_list .row_place span {
+      display: block; }
     .course .course_list li:before {
       width: 100px;
       margin-left: -50px;
       bottom: -10px; }
     .course .course_list li + li {
       margin-top: 20px; }
+    .course .course_list + .separator_small {
+      margin-top: 62px; }
     .course .btn {
       width: 120px; }
   #sec_11 {
@@ -1038,7 +1043,8 @@ textarea:-ms-input-placeholder {
   #sec_03 .item_row + .item_row {
     margin-top: 0px; }
   #sec_04 {
-    background-image: none; }
+    background-image: none;
+    text-align: center; }
     #sec_04 h2 {
       margin-top: 0; }
     #sec_04 .sec_img {
