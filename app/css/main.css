@@ -457,6 +457,9 @@
     text-align: center;
     letter-spacing: .05em;
     color: #005aff; }
+    #footer .btn_footer span {
+      margin-top: 2px;
+      display: inline-block; }
     #footer .btn_footer:hover {
       background-color: #005aff;
       color: #fff; }

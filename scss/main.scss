@@ -528,6 +528,10 @@
     @include size(160px 40px);
     border-radius: 19px;
     border: 1px solid #005afe;
+    span{
+      margin-top: 2px;
+      display: inline-block;
+    }
     background-color: transparent;
 
     font: 14px $title_font;
