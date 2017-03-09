@@ -521,6 +521,14 @@ footer {
 #modal_callback h2 {
   margin: 30px 30px 30px; }
 
+#modal_callback_ok {
+  overflow: hidden !important; }
+  #modal_callback_ok h2 {
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  #modal_callback_ok .btn {
+    margin-bottom: 10px !important; }
+
 div[id*="modal_coach-"] {
   min-width: 700px; }
   div[id*="modal_coach-"] .coach_img {

@@ -45,6 +45,17 @@ cursor: -webkit-grabbing !important;
   h2{margin: 30px 30px 30px;}
 }
 
+#modal_callback_ok{
+  overflow: hidden !important;
+  h2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .btn{
+    margin-bottom: 10px !important;
+  }
+}
+
 
 div[id*="modal_coach-"]{
 

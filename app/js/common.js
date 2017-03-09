@@ -62,25 +62,8 @@ $(function() {
           $("[name=send]").removeAttr("disabled");
         }, 1000);
         $('div.md-show').removeClass('md-show');
-        dataLayer.push({
-          'form_type': formType,
-          'event': "form_submit"
-        });
-          // Отправка в базу данных
-          $.ajax({
-           type: 'POST',
-           url: 'db/registration.php',
-           dataType: 'json',
-           data: form.serialize(),
-           success: function(response) {
-             console.info(response);
-             console.log(form.serialize());
-             if (response.status == 'success') {
-              $('form').trigger("reset");
-              window.location.href = 'http://qagirl.pro/success';
-            }
-          }
-        });
+        $('form').trigger("reset");
+        $("#call_ok")[0].click();
       },
       error: function(xhr, str) {
         console.log("Erorr")
