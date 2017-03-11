@@ -3,6 +3,20 @@
 
 <head>
 
+<script>
+  dataLayer = [];
+ </script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXRGT7D');</script>
+<!-- End Google Tag Manager -->
+
+
+
     <meta charset="utf-8">
 
     <title>Интенсив “Реклама и PR” | Высшая Школа Коммуникаций</title>
@@ -63,7 +77,8 @@
 
 </head>
 <body data-img="img/land.jpg">
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXRGT7D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <div id="sec_01">
@@ -102,7 +117,7 @@
         </div>
             <div class="col-2">
                 <a href="http://vshk.org/"><img src="img/logo.png" alt="Логотип" class="logo"></a>
-                <a class="md-trigger call_btn flex mobile" data-modal="modal_callback">Позвоните мне</a>
+                <a id="callback_header-btn" class="md-trigger call_btn flex mobile" data-modal="modal_callback">Позвоните мне</a>
             </div>
             <div class="col-8">
                 <ul class="navigation">
@@ -124,7 +139,7 @@
                 <p class="beforeheader_text text--title">КУРС ВЫСШЕЙ ШКОЛЫ КОММУНИКАЦИЙ </p>
                 <h1 class="header_text text--title">Реклама и PR</h1>
                 <p class="afterheader_text">Четырехдневный интенсив по маркетингу</p>
-                <a class="scroll btn flex" href="#sec_10"><span>Записаться</span></a>
+                <a id="header_anchor-btn" class="scroll btn flex" href="#sec_10"><span>Записаться</span></a>
             </div>
         </div>
     </div>
@@ -602,7 +617,7 @@
             </div>
             <div class="col-6">
                 <p class="text">Все спикеры, тайминг и темы выступлений <br> в удобном формате </p>
-                <a class="btn flex" href="http://vshk.org/pr/schedule"><span>Посмотреть программу</span></a>
+                <a id="program-btn" class="btn flex" href="http://vshk.org/pr/schedule"><span>Посмотреть программу</span></a>
             </div>
         </div>
     </div>
@@ -695,7 +710,7 @@
                 <div class="item">
                     <p class="text--title title"> Запишитесь</p>
                     <p class="text">Чтоб успеть на ближайший курс <br> <span> — 16-19 марта.</span></p>
-                    <a class="scroll btn flex" href="#sec_10"><span>Записаться</span></a>
+                    <a id="08_registration-btn" class="scroll btn flex" href="#sec_10"><span>Записаться</span></a>
                 </div>
             </div>
             <div class="col-6">
@@ -820,7 +835,7 @@
                     </ul>
                     <img src="img/line_sm.png" alt="Разделитель" class="separator_small">
                     <p class="price text--title">1500 <span>грн.</span></p>
-                    <a class="md-trigger btn flex" data-modal="modal_callback_packet-1"><span>Оплатить</span></a>
+                    <a id="first_pack-btn" class="md-trigger btn flex" data-modal="modal_callback_packet-1"><span>Оплатить</span></a>
                 </div>
             </div>
             <div class="col-3">
@@ -845,7 +860,7 @@
                     </ul>
                     <img src="img/line_sm.png" alt="Разделитель" class="separator_small">
                     <p class="price text--title">2400 <span>грн.</span></p>
-                    <a class="md-trigger btn flex" data-modal="modal_callback_packet-2"><span>Оплатить</span></a>
+                    <a  id="second_pack-btn" class="md-trigger btn flex" data-modal="modal_callback_packet-2"><span>Оплатить</span></a>
                 </div>
             </div>
             <div class="col-3">
@@ -870,7 +885,7 @@
                     </ul>
                     <img src="img/line_sm.png" alt="Разделитель" class="separator_small">
                     <p class="price text--title">3700 <span>грн.</span></p>
-                    <a class="md-trigger btn flex" data-modal="modal_callback_packet-3"><span>Оплатить</span></a>
+                    <a  id="third_pack-btn" class="md-trigger btn flex" data-modal="modal_callback_packet-3"><span>Оплатить</span></a>
                 </div>
             </div>
             <div class="col-3">
@@ -895,7 +910,7 @@
                     </ul>
                     <img src="img/line_sm.png" alt="Разделитель" class="separator_small">
                     <p class="price text--title">4500 <span>грн.</span></p>
-                    <a class="md-trigger btn flex" data-modal="modal_callback_packet-4"><span>Оплатить</span></a>
+                    <a  id="fourth_pack-btn" class="md-trigger btn flex" data-modal="modal_callback_packet-4"><span>Оплатить</span></a>
                 </div>
             </div>
         </div>
@@ -925,7 +940,10 @@
 
                         <!-- Hidden Required Fields -->
                         <input type="hidden" name="project_name" value="VSHK">
+                        <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                         <input type="hidden" name="admin_email" value="info@vshk.org">
+                        <input type="hidden" name="category" value="registration">
+                        <input type="hidden" name="action_form" value="Регистрация">
                         <!-- END Hidden Required Fields -->
 
                         <span class="field">
@@ -944,7 +962,7 @@
                             <span class="bar"></span>
                         </span>
 
-                        <button type="submit" class="btn" name="send"><span>Записаться</span></button>
+                        <button  id="form-btn" type="submit" class="btn" name="send"><span>Записаться</span></button>
                     </form>
                 </div>
             </div>
@@ -985,7 +1003,10 @@
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="VSHK">
+                    <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                     <input type="hidden" name="admin_email" value="info@vshk.org">
+                    <input type="hidden" name="category" value="question">
+                    <input type="hidden" name="action_form" value="send">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">
@@ -999,7 +1020,7 @@
                     </span>
 
 
-                    <button type="submit" class="btn_footer" name="send"><span>Отправить</span></button>
+                    <button id="desctop_question_form-btn" type="submit" class="btn_footer" name="send"><span>Отправить</span></button>
 
                 </form>
             </div>
@@ -1037,7 +1058,10 @@
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="VSHK">
+                    <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                     <input type="hidden" name="admin_email" value="info@vshk.org">
+                    <input type="hidden" name="category" value="question">
+                    <input type="hidden" name="action_form" value="send">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">
@@ -1051,7 +1075,7 @@
                     </span>
 
 
-                    <button type="submit" class="btn_footer" name="send"><span>Отправить</span></button>
+                    <button id="mobile_question_form-btn" type="submit" class="btn_footer" name="send"><span>Отправить</span></button>
 
                 </form>
             </div>
@@ -1094,7 +1118,10 @@
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="VSHK">
+                    <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                     <input type="hidden" name="admin_email" value="info@vshk.org">
+                    <input type="hidden" name="category" value="callback">
+                    <input type="hidden" name="action_form" value="send">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">
@@ -1110,7 +1137,7 @@
                     </span>
 
 
-                    <button type="submit" class="btn" name="send"><span>Перезвоните мне</span></button>
+                    <button id="call_modal-btn" type="submit" class="btn" name="send"><span>Перезвоните мне</span></button>
 
                 </form>
 
@@ -1139,7 +1166,10 @@
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="VSHK">
+                    <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                     <input type="hidden" name="admin_email" value="info@vshk.org">
+                    <input type="hidden" name="category" value="registration">
+                    <input type="hidden" name="action_form" value="Регистрация">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">
@@ -1161,7 +1191,7 @@
                     </span>
 
 
-                    <button type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
+                    <button id="modal_pack-1-btn" type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
 
                 </form>
 
@@ -1188,7 +1218,10 @@
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="VSHK">
+                    <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                     <input type="hidden" name="admin_email" value="info@vshk.org">
+                    <input type="hidden" name="category" value="registration">
+                    <input type="hidden" name="action_form" value="Регистрация">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">
@@ -1209,7 +1242,7 @@
                     </span>
 
 
-                    <button type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
+                    <button id="modal_pack-2-btn" type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
 
                 </form>
 
@@ -1236,7 +1269,10 @@
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="VSHK">
+                    <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                     <input type="hidden" name="admin_email" value="info@vshk.org">
+                    <input type="hidden" name="category" value="registration">
+                    <input type="hidden" name="action_form" value="Регистрация">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">
@@ -1258,7 +1294,7 @@
 
 
 
-                    <button type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
+                    <button id="modal_pack-3-btn" type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
 
                 </form>
 
@@ -1285,7 +1321,10 @@
 
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="VSHK">
+                    <input type="hidden" name="form_subject" value="VSHK_PR-lp">
                     <input type="hidden" name="admin_email" value="info@vshk.org">
+                    <input type="hidden" name="category" value="registration">
+                    <input type="hidden" name="action_form" value="Регистрация">
                     <!-- END Hidden Required Fields -->
 
                     <span class="field">
@@ -1305,7 +1344,7 @@
                     </span>
 
 
-                    <button type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
+                    <button id="modal_pack-4-btn" type="submit" class="btn" name="send"><span>Зарегистрироваться</span></button>
 
                 </form>
 
