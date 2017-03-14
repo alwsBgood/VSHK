@@ -54,6 +54,13 @@ $(function() {
     $(send_btn).each(function() {
       $(this).attr('disabled', true);
     });
+     // Отправка в базу данных
+     $.ajax({
+      type: 'POST',
+      url: 'db/registration.php',
+      dataType: 'json',
+      data: form.serialize(),
+    });
     // Отправка на почту
     $.ajax({
       type: 'POST',

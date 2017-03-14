@@ -50,7 +50,7 @@ h2{
     top: 50%;
     margin-top: -187px;
     right: -80px;
-    background: url(../img/sec_02-dots.png) no-repeat;
+    background: url(img/sec_02-dots.png) no-repeat;
   }
 }
 
@@ -92,7 +92,7 @@ button.btn span{
     top: 0;
     left: 0;
     border-radius: 19px;
-    background: url(../img/);
+    background: url(img/);
     background-image: linear-gradient(to top, #005aff 0%, #0052e8 100%);
     transition: opacity 0.4s;
   }
@@ -136,7 +136,7 @@ button.btn span{
   padding: 35px 0 170px;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url(../img/sec_01-bg.png);
+  background-image: url(img/sec_01-bg.png);
   background-color: $second_color;
 
   .navigation{
